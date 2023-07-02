@@ -6,9 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "build1": "npm install vite ",
-    "build2": "npm install",
-    "heroku-postbuild": "npm run build1 && npm run build2 && npm run build ",
+    "heroku-prebuild": "export NPM_CONFIG_PRODUCTION=false; npm install vite && npm install --only=dev",
+    "heroku-postbuild": "npm run build ",
     "preview": "vite preview"
   },
   "devDependencies": {
