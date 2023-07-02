@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "build1": "npm install vite",
+    "build1": "npm install vite --production=false",
     "build2": "npm install",
     "heroku-prebuild": "npm install --only=dev",
     "heroku-postbuild": "npm run build1 && npm run build2 && npm run build ",
