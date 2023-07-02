@@ -5,12 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "preview": "vite preview",
-    "build": " npm install",
-    "build2": " npm install react-scripts",
-    "build3": "npm install vite",
-    "install-client": "npm run build",
-    "heroku-postbuild": "npm run build2 && npm run build3 && npm run build && npm run install-client "
+    "build": "vite build",
+    "build1": "npm install vite",
+    "build2": "npm install",
+    "heroku-postbuild": "npm run build1 && npm run build2 && npm run build ",
+    "preview": "vite preview"
   },
   "devDependencies": {
     "vite": "^4.3.9"
