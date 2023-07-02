@@ -1,19 +1,19 @@
 {
   "name": "sushi-ordering-website",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "heroku-prebuild": "export NPM_CONFIG_PRODUCTION=false; npm install vite && npm install --only=dev",
-    "heroku-postbuild": "npm run build ",
-    "preview": "vite preview"
+    "build": "cd client && npm install",
+    "build2": "cd client && npm install react-scripts",
+    "build3": "cd client && npm install vite",
+    "install-client": "cd client && npm run build",
+    "heroku-postbuild": "npm run build2 && npm run build3 && npm run build && npm run install-client ",
+    "start": "node server.js"
   },
-  "devDependencies": {
-    "vite": "^4.3.9"
-  },
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "aos": "^2.3.4"
+    "express": "^4.18.2"
   }
 }
